@@ -1,0 +1,13 @@
+<template name="message">
+	<tr>
+		{{#if isInRole 'administrator'}}
+			<div class="col-sm-8">
+				<strong>{{title}}</strong><br>
+				<textarea>{{body}}</textarea><br>
+			</div>
+			<div class="col-sm-4"><button><span class="glyphicon glyphicon-trash"></span></button></div>
+		{{/if}}
+		<br>
+		<small><i>{{author.profile.name}} / {{dateToView}}</i></small>
+	</tr>
+</template>
