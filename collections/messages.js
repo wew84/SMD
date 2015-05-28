@@ -7,6 +7,7 @@ Messages = new Meteor.Collection('messages');
 	title: string,
 	body string,
 	author: {a user object},
+	completed: bool,
 	_id: ObjectID("..")
 }
 */
