@@ -7,3 +7,12 @@
 meteor-platform
 autopublish
 insecure
+iron:router
+joshowens:accounts-entry
+jquery
+underscore
+alanning:roles
+accounts-ui-unstyled
+audit-argument-checks
+accounts-base
+accounts-password
