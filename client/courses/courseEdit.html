@@ -1,0 +1,34 @@
+<template name="courseEdit">
+	<form class="main">
+	<div class="row">
+		<div class="col-md-3">
+			<label class="control-label" for="nameinput">שם</label>
+			<input name="nameinput" type="text" value="{{name}}" class="form-control">
+		</div>
+
+		<div class="col-md-2">
+			<label class="control-label" for="gradeselect">שכבה</label>
+			<div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="gradeselect" value="10"> י
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="gradeselect" value="11"> י"א
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="gradeselect" value="12"> י"ב
+			  </label>
+			</div>
+			<input name="quantityinput" type="number" value="{{qty}}" class="form-control" min="0">
+		</div>
+
+		<div class="col-md-3"><br>
+		<input type="submit" value="Save" class="btn btn-primary"/>
+		{{#unless isNewCourse}}
+		<button id="delete-button" class="btn btn-danger" type="button">Delete</button>
+		{{/unless}}
+		</div>
+
+	</div>
+	</form>
+</template>

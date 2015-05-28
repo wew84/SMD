@@ -1,0 +1,7 @@
+<template name="course">
+<tr class="course">	
+	<td>{{name}}</td>
+	{{#if isInRole "admin"}}<td>{{grade}}</td>{{/if}}
+	<td><a href="{{pathFor 'courseEdit'}}">Edit</a></td>{{/if}}
+</tr>
+</template>
