@@ -2,7 +2,7 @@ Meteor.startup(function () {
   AccountsEntry.config({
     homeRoute: '/sign-in/',                    // mandatory - path to redirect to after sign-out
     dashboardRoute: '/register',      // mandatory - path to redirect to after successful sign-in
-    passwordSignupFields: 'EMAIL_ONLY',
+    passwordSignupFields: 'USERNAME_ONLY',
     extraSignUpFields: [{             // Add extra signup fields on the signup page
       field: "name",                           // The database property you want to store the data in
       label: "שם",                      // The html lable for the field
