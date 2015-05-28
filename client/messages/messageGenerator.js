@@ -1,16 +1,12 @@
-Template.msgGenerator.events = {
+Template.messageGenerator.events = {
 	"submit form": function(e) {
 		e.preventDefault();
 
 		var entry = {
-			date: moment(),
-			body: $(e.target).find("[name=bodyInput]").val(),
-			response: $(e.target).find("[name=titleInput]").val(),
-			author: Meteor.user(),
+			topic: $(e.target).find("[name=topicinput]").val(),
+			body: $(e.target).find("[name=bodyinput]").val(),
+			course: {}
 		};
-
-		if (entry.response == "")
-			entry.response = "אין";
 
 		Meteor.call('insertMessage', entry, function(error, id) {
 			if(error){
