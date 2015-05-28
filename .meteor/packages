@@ -17,4 +17,4 @@ audit-argument-checks
 accounts-base
 accounts-password
 mrt:moment
-bootstrap
+twbs:bootstrap
