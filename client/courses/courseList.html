@@ -3,9 +3,11 @@
 	{{#if isInRole 'admin'}}
 	<button id="create-button" class="btn btn-primary" type="button">הוספת קורס</button>
 	{{/if}}
+	<form>
 	<table class="table">
 		<thead>
 		<tr>
+			{{#if isInRole "student"}}<th></th>{{/if}}
 			<th>שם</th>
 			<th>שכבה</th>
 			{{#if isInRole "admin"}}<th></th>{{/if}}
@@ -17,4 +19,6 @@
 		{{/each}}
 		</tbody>
 	</table>
+	<button type="submit" id="courseChange" class="btn btn-default btn-large">עדכון</button>
+	</form>
 </template>
