@@ -1,0 +1,25 @@
+<!-- The layout used for routing. Everything in the {{> yield}} is generated according to the iron-router
+TODO: Add a header and tabs and shit
+TODO: If isInRole handlebars to make differnt users have different tabs -->
+
+<template name="layout">
+{{#if currentUser}}
+<nav class="navbar navbar-default" role="navigation">
+<div class="navbar-header">
+<div class="navbar-inner">
+    <ul class="nav navbar-nav">
+	<li><a href="{{pathFor 'messageList'}}" class="navbar-btn">הודעות</a></li>
+	{{#if isInRole "admin"}}<li><a href="{{pathFor 'courseList'}}" class="navbar-btn">קורסים</a></li>{{/if}}
+	<li><a href="{{pathFor 'profile'}}" class="navbar-btn">פרופיל</a></li>
+	<li><a href="/sign-out" class="navbar-btn">Sign Out</a></li>
+	</ul>
+</div>
+</div>
+</nav>
+{{/if}}
+<div class="container">
+{{> yield}}
+</div>
+<div class="footer">
+</div>
+</template>
