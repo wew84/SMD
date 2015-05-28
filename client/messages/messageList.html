@@ -1,13 +1,16 @@
 <template name="messageList">
+<<<<<<< HEAD
 	{{setTitle "הודעות"}}
+=======
+>>>>>>> 31f35e3c455242bb5875f8dd2cd6d936a64366de
 	<h2>הוספת הודעה</h2>
-	{{> msgGenerator}}
+	{{> messageGenerator}}
 	<h2>הודעות</h2>
 
 	<div class="row">
 		<div class="col-sm-offset-2">
 			<hr>
-			{{#each msgManager}}
+			{{#each messageManager}}
 				{{> message}}
 			{{/each}}
 		</div>

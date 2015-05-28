@@ -1,5 +1,5 @@
-Template.msgList.helpers({
-	msgManager: function() {
+Template.messageList.helpers({
+	messageManager: function() {
 		return Messages.find();
 	}
 });
