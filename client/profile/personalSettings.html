@@ -2,14 +2,16 @@
 	<div class="col-sm-6">
 		<form id="personalSettings">
 			<label for="nameInput" class="control-label">שם</label>
-			<input id="nameInput "name="nameInput" type="text">{{name}}</input>
-
+			<input id="nameInput" name="nameInput" type="text" value="{{userName}}">
+			{{#if isInRole "student"}}
 			<label for="gradeInput" class="control-label">שכבה</label>
 			<select class="form-control general-form" id="gradeInput" name="gradeInput" required>
   				<option value="10" selected={{isInGrade 10}}>י</option>
-  				<option value="11" selected={{isInGrade 10}>י"א</option>
-  				<option value="12" selected={{isInGrade 10}>י"ב</option>
+  				<option value="11" selected={{isInGrade 11}}>י"א</option>
+  				<option value="12" selected={{isInGrade 12}}>י"ב</option>
 			</select>
+			{{/if}}
+			<button id="personalSettings" class="btn btn-primary" type="submit">שינוי פרטים אישיים</button>
 		</form>
 	</div>
 

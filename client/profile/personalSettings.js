@@ -7,8 +7,11 @@ Template.personalSettings.helpers({
   ownProfile: function() {
     return this._id == Meteor.userId();
   },
-  personalSettings : function(grade) {
+  isInGrade : function(grade) {
   	return grade == Meteor.user().profile.grade;
+  },
+  userName : function() {
+    return Meteor.user().profile.name;
   }
 });
 
