@@ -20,7 +20,7 @@ Meteor.publish('messages', function(){
 
 Meteor.publish('messageID', function(id){
 	check(id, String)
-	return Messages.findOne(id);
+	return Messages.find(id);
 });
 
 Meteor.publish('users', function(){
@@ -32,6 +32,8 @@ Meteor.publish('users', function(){
 })
 
 Meteor.publish('messagesByUserID', function(userID){
+	check(userID, String);
 	var userCourses = Meteor.users.findOne(userID).profile.courses;
+	console.log(userCourses)
 	return Messages.find({"completed": false, "course._id": {"$in": userCourses}});
 })
