@@ -1,0 +1,34 @@
+/*TODO: Check for nonused classes*/
+.navbar-smd {
+	float: right;
+	text-align: right;
+	background-color: #428bca;
+}
+.navbar-inner-smd, .navbar-header-smd{
+	float: right;
+	text-align: right;
+	background-color: #428bca;
+	color: white;
+	background-image: none;
+}
+.navbar .nav > li > a{
+	color: white;
+	text-shadow: 0 0 0 0px;
+	background-color: #428bca;
+	margin-right: 0.00535905680600214362272240085745%;
+	margin-left: 0.00535905680600214362272240085745%;
+}
+.navbar .nav > li{
+	background-color: #428bca;
+	font-family: Verdana, Geneva, sans-serif;
+}
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner, .navbar-inner, .navbar-static-top .navbar-header{
+	border-width: 0 0 0 0px;
+	background-color: #428bca;
+}
+.navbar.navbar-smd.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li.active, body > div.header > nav > div > ul > li.dropdown.open{
+	background-color: #428bca;
+}
+.navbar .nav > li:hover, .navbar .nav > li:hover > a{
+	background-color: #2d6ca2;
+}

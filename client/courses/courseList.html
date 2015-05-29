@@ -19,6 +19,8 @@
 		{{/each}}
 		</tbody>
 	</table>
-	<button type="submit" id="courseChange" class="btn btn-success btn-large">עדכון</button>
+	{{#if isInRole 'student'}}
+	<button type="submit" id="courseChange" class="btn btn-primary btn-large">עדכון</button>
+	{{/if}}
 	</form>
 </template>

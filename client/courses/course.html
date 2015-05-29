@@ -9,6 +9,6 @@
   {{/unless}}
 	<td>{{name}}</td>
 	{{#if isInRole "administrator"}}<td>{{grade}}</td>
-	<td><a href="{{pathFor 'courseEdit'}}">Edit</a></td>{{/if}}
+	<td><a class="btn btn-default" href="{{pathFor 'courseEdit'}}"><span class="glyphicon glyphicon-pencil"></span></a></td>{{/if}}
 </tr>
 </template>

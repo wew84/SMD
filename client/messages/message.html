@@ -1,18 +1,17 @@
 <template name="message">
-	<div class="panel panel-default">
+	<div class="panel panel-primary">
 	  <div class="panel-heading">
 	    <h3 class="panel-title">{{topic}}
 	    {{#if isInRole 'administrator'}}
-				<button type="button" class="close pull-right">
-					<span aria-hidden="true">&times;</span>
-					<span class="sr-only">Close</span>
+				<button type="button" class="close pull-right btn btn-link red">
+					<span class="glyphicon glyphicon-remove red"></span>
 				</button>
 		{{/if}}
 		</h3>
 	  </div>
 	  <div class="panel-body">
 	    {{body}}
-	    <br><small><b>{{this.course.name}}&nbsp;&nbsp;</b><i>{{author.profile.name}} / {{lastEdited}}</i></small>
+	    <span class="cwhite"><br><small><small><b>{{this.course.name}}&nbsp;&nbsp;</b><br><i>{{author.profile.name}} / {{lastEdited}}</i></small></small></span>
 	  </div>
 	</div>
 </template>	
