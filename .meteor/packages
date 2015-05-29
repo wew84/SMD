@@ -18,3 +18,4 @@ accounts-base
 accounts-password
 mrt:moment
 twbs:bootstrap
+chrismbeckett:toastr

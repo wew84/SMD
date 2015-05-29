@@ -1,0 +1,34 @@
+<template name="personalSettings">
+	<div class="col-sm-6">
+		<form id="personalSettings">
+			<label for="nameInput" class="control-label">שם</label>
+			<input id="nameInput "name="nameInput" type="text">{{name}}</input>
+
+			<label for="gradeInput" class="control-label">שכבה</label>
+			<select class="form-control general-form" id="gradeInput" name="gradeInput" required>
+  				<option value="10" selected={{isInGrade 10}}>י</option>
+  				<option value="11" selected={{isInGrade 10}>י"א</option>
+  				<option value="12" selected={{isInGrade 10}>י"ב</option>
+			</select>
+		</form>
+	</div>
+
+	<div class="col-sm-6">
+		<form id="changepassword">
+			<div class="col-md-3">
+				<h2>שינוי סיסמא</h2><br>
+				<label class="control-label" for="currentpassword">סיסמא ישנה</label>
+				<input id="currentpassword" name="currentpassword" type="password" class="form-control">
+
+				<label class="control-label" for="newpassword">סיסמא חדשה</label>
+				<input id="newpassword" name="newpassword" type="password" class="form-control">
+
+				<label class="control-label" for="confirmpassword">סיסמא חדשה שוב</label>
+				<input id="confirmpassword" name="confirmpassword" type="password" class="form-control">
+				<br>
+				<button id="changepassword-submit" class="btn btn-primary" type="submit">שינוי סיסמא</button>
+			</div>
+		</form>
+	</div>
+
+</template>

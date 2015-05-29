@@ -1,5 +1,14 @@
 <template name="course">
 <tr class="course">	
+	{{#if isInRole "student"}}
+	<td>
+  	<div class="checkbox" data-id="{{this._id}}">
+  		<label>
+    		<input type="checkbox"> {{this.name}}
+    	</label>
+  </div>
+  </td>
+  {{/if}}
 	<td>{{name}}</td>
 	{{#if isInRole "administrator"}}<td>{{grade}}</td>
 	<td><a href="{{pathFor 'courseEdit'}}">Edit</a></td>{{/if}}
