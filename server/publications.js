@@ -30,3 +30,7 @@ Meteor.publish('users', function(){
   this.stop();
   return;
 })
+
+Meteor.publish('messagesByCourse', function(userCourses) {
+	return Messages.find({"completed": false, "course._id": {"$in": userCourses}});
+});
