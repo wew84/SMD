@@ -13,9 +13,8 @@ Template.courseList.events = {
   },
   "click #courseChange": function(e) {
   	e.preventDefault();
-
-  	var courses = _.pluck($.find(".utility-checkbox:checked"), "data-id");
-  	Meteor.call("editUser", courses, function(error) {
+    var courses = _.map($.find(".course-checkbox:checked"), function(elem){return $(elem).data("id");})
+  	Meteor.call("editUserCourses", courses, function(error) {
       if(error){
         toastr.error(error.reason);
       } else {

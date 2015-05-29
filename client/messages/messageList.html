@@ -1,6 +1,8 @@
 <template name="messageList">
-	<h2>הוספת הודעה</h2>
-	{{> messageGenerator}}
+	{{#if isInRole "administrator"}}
+		<h2>הוספת הודעה</h2>
+		{{> messageGenerator}}
+	{{/if}}
 	<h2>הודעות</h2>
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">

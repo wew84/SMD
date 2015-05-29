@@ -1,7 +1,7 @@
 //Handles click events inside of a displayed row
 Template.userRow.helpers({
   defaultCheck: function() {
-  	return Roles.userIsInRole(this._id, 'admin');
+  	return Roles.userIsInRole(this, 'administrator');
   }
 });
 

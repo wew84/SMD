@@ -7,7 +7,7 @@
 	<table class="table">
 		<thead>
 		<tr>
-			{{#if isInRole "student"}}<th></th>{{/if}}
+			{{#unless isInRole "administrator"}}<th></th>{{/unless}}
 			<th>שם</th>
 			<th>שכבה</th>
 			{{#if isInRole "administrator"}}<th></th>{{/if}}
