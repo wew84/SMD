@@ -1,13 +1,21 @@
 Meteor.publish('courses', function(){
-    return Courses.find();
+	if(Roles.userIsInRole(this.userId, "administrator")){
+    	return Courses.find();
+	}
+	userGrade = Meteor.users.findOne({"_id": this.userId}).profile.grade;
+	return Courses.find({"grade": userGrade})
 });
 
 Meteor.publish('messages', function(){
-	return Messages.find();
+	if(Roles.userIsInRole(this.userId, "administrator")){
+    	return Messages.find({"completed": false});
+	}
+	userCourses = Meteor.users.findOne({"_id": this.userId}).profile.courses;
+	return Messages.find({"completed": false, "course._id": {"$in": userCourses}});
 });
 
 Meteor.publish('users', function(){
-  if(Roles.userIsInRole(this.userId, 'admin')) {
+  if(Roles.userIsInRole(this.userId, 'administrator')) {
     return Meteor.users.find();
   }
   this.stop();

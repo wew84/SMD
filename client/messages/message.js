@@ -3,3 +3,10 @@ Template.message.helpers({
 		return this.date.from(moment());
 	}
 });
+
+Template.message.events = {
+  "click .close": function(e) {
+    e.preventDefault();
+    Meteor.call('completeMessage', this._id);
+  }
+}

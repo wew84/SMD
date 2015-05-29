@@ -8,7 +8,7 @@ Template.courseEdit.events = {
     e.preventDefault();
     var courseUpdateProperties = {
       name: $(e.target).find("[name=nameinput]").val(),
-      grade: $(e.target).find("[name=gradeselect]:checked").val() == "true"
+      grade: $(e.target).find("[name=gradeselect]:checked").val()
     };
     if(this._id == null || typeof this._id == "undefined"){
       Meteor.call('insertCourse', courseUpdateProperties, log_error);

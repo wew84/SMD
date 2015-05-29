@@ -1,13 +1,19 @@
 <template name="message">
-	<tr>
-		{{#if isInRole 'administrator'}}
-			<div class="col-sm-8">
-				<strong>{{title}}</strong><br>
-				<textarea>{{body}}</textarea><br>
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">{{topic}}</h3>
+	  </div>
+	  <div class="panel-body">
+	    {{body}}
+	    <small><i>{{author.profile.name}} / {{dateToView}}</i></small>
+	    {{#if isInRole 'administrator'}}
+				<div class="pull-right">
+				<button type="button" class="close pull-right">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span>
+				</button><br>
 			</div>
-			<div class="col-sm-4"><button><span class="glyphicon glyphicon-trash"></span></button></div>
 		{{/if}}
-		<br>
-		<small><i>{{author.profile.name}} / {{dateToView}}</i></small>
-	</tr>
+	  </div>
+	</div>
 </template>

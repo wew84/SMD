@@ -1,6 +1,6 @@
 <template name="courseList">
 	<h1>קורסים</h1>
-	{{#if isInRole 'admin'}}
+	{{#if isInRole 'administrator'}}
 	<button id="create-button" class="btn btn-primary" type="button">הוספת קורס</button>
 	{{/if}}
 	<table class="table">
@@ -8,12 +8,12 @@
 		<tr>
 			<th>שם</th>
 			<th>שכבה</th>
-			{{#if isInRole "admin"}}<th></th>{{/if}}
+			{{#if isInRole "administrator"}}<th></th>{{/if}}
 		</tr>
 		</thead>
 		<tbody>
 		{{#each courseManager}}
-			{{> item}}
+			{{> course}}
 		{{/each}}
 		</tbody>
 	</table>
