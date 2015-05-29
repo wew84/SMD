@@ -15,7 +15,7 @@ Template.personalSettings.helpers({
   }
 });
 
-Template.personalSettings.events = {
+Template.personalSettings.events({
   "submit #changepassword": function(e) {
     e.preventDefault();
     var currentPassword = $("[name=currentpassword]").val();
@@ -64,4 +64,4 @@ Template.personalSettings.events = {
     });
     return;
   }
-};
+});

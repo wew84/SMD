@@ -3,7 +3,13 @@
 		<form class="main" id="msgform">
 			<div class="col-md-2 col-md-offset-2">
 				<label class="control-label" for="topicinput">נושא</label>
-				<input id="topicinput" name="topicinput" type="text" placeholder="" class="form-control">	
+				<input id="topicinput" name="topicinput" type="text" placeholder="" class="form-control">
+				<label class="control-label" for="courseinput">קורס</label>
+				<select class="form-control general-form" id="courseinput" name="courseinput" required>
+					{{#each courseManager}}
+						<option value="{{_id}}">{{name}}</option>
+					{{/each}}
+				</select>
 			</div>
 
 			<div class="col-md-3">
@@ -12,6 +18,7 @@
 			</div>
 
 			<div class="col-md-2">
+				<br>
  				<input type="submit" value="אישור" class="btn btn-primary attn-generator-button general-form">
 			</div>
 	</form>

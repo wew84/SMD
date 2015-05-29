@@ -1,17 +1,17 @@
-Template.courseEdit.helpers = {
+Template.courseEdit.helpers({
   isNewCourse: function() {
     return this._id == null || this._id == "null";
   },
   isInGrade: function(testGrade) {
     return this.grade == testGrade;
   }
-}
-Template.courseEdit.events = {
+});
+Template.courseEdit.events({
   "submit form": function(e) {
     e.preventDefault();
     var courseUpdateProperties = {
       name: $(e.target).find("[name=nameinput]").val(),
-      grade: $(e.target).find("[name=gradeselect]:checked").val()
+      grade: $(e.target).find("#gradeselect").val()
     };
     if(this._id == null || typeof this._id == "undefined"){
       Meteor.call('insertCourse', courseUpdateProperties, log_error);
@@ -25,7 +25,7 @@ Template.courseEdit.events = {
     e.preventDefault();
     Meteor.call('deleteCourse', this._id, log_error);
   }
-}
+});
 
 log_error = function(error, id) {
     if(error) {

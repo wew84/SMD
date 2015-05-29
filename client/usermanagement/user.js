@@ -6,7 +6,7 @@ Template.userRow.helpers({
 });
 
 //Handles click events inside of a displayed row
-Template.userRow.events = {
+Template.userRow.events({
   "click #set-role": function(e) {
     e.preventDefault();
     var role = $("#role-0-" + this._id).is(':checked') ? $("#role-0-" + this._id).val() : "none";
@@ -16,4 +16,4 @@ Template.userRow.events = {
       }
     });
   }
-}
+});

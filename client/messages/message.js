@@ -4,9 +4,9 @@ Template.message.helpers({
 	}
 });
 
-Template.message.events = {
+Template.message.events({
   "click .close": function(e) {
     e.preventDefault();
     Meteor.call('completeMessage', this._id);
   }
-}
+});
