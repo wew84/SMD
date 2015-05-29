@@ -1,6 +1,9 @@
 Template.courseEdit.helpers = {
   isNewCourse: function() {
     return this._id == null || this._id == "null";
+  },
+  isInGrade: function(testGrade) {
+    return this.grade == testGrade;
   }
 }
 Template.courseEdit.events = {
