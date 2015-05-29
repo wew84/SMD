@@ -1,19 +1,17 @@
 <template name="message">
 	<div class="panel panel-default">
 	  <div class="panel-heading">
-	    <h3 class="panel-title">{{topic}}</h3>
-	  </div>
-	  <div class="panel-body">
-	    {{body}}
-	    <small><i>{{author.profile.name}} / {{dateToView}}</i></small>
+	    <h3 class="panel-title">{{topic}}
 	    {{#if isInRole 'administrator'}}
-				<div class="pull-right">
 				<button type="button" class="close pull-right">
 					<span aria-hidden="true">&times;</span>
 					<span class="sr-only">Close</span>
 				</button><br>
-			</div>
-		{{/if}}
+		{{/if}}</h3>
+	  </div>
+	  <div class="panel-body">
+	    {{body}}
+	    <small><i>{{author.profile.name}} / {{dateToView}}</i></small>
 	  </div>
 	</div>
-</template>
+</template>	

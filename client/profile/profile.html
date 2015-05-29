@@ -1,8 +1,9 @@
 <template name="profile">
 	<h3>פרטים אישיים</h3>
 	{{> personalSettings}}
+	
 	{{#unless isInRole "administrator"}}
 		<h3>עדכון קורסים</h3>
 		{{> courseList}}
-	{{/if}}
+	{{/unless}}
 </template>
