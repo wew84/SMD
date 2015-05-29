@@ -1,0 +1,105 @@
+.cwhite{
+	color: #aaa;
+}
+.red {
+	color: #fff;
+	box-shadow: 0 0 0 0px;
+}
+.container {
+	margin-top: 5%;
+}
+.general-form {
+	width: 100%;
+}
+.permit-generator-button, .attn-generator-button {
+	margin-top: 5%;
+	text-align: center;
+}
+#exceptional-check {
+	margin-top: 15%;
+}
+.comments {
+	height: 40%;
+	resize: none;
+}
+.text-input {
+	margin-bottom: 5%;
+}
+.text-input:last-child {
+	margin-bottom: 10%;
+}
+h2 {
+	background-color: #5bc0de;
+	color: white;
+	padding-bottom: 0.2em;
+	padding-top: 0.2em;
+	padding-right: 0.5em;
+}
+.permits-tcolumn-lg {
+	width: 28%;
+}
+.permits-tcolumn {
+	width: 12%;
+}
+.permits-List {
+	width: 100%;
+	margin-top: 0%;
+}
+.permits-tcolumn-class {
+	width: 8%;
+}
+.permits-tcolumn-destination {
+	width: 14%;
+}
+.permit-edit-button, .permit-close-button {
+	margin-top: 3%;
+}
+.permit-edit-button {
+	margin-right: 4%;
+}
+.permit-edit-button {
+	margin-right: 2%;
+}
+.margins {
+	margin-left: 0%;
+	margin-right: 0%;
+}
+.print-btns {
+	display: inline;
+}
+.right-border {
+	border-color: #428bca;
+}
+.permit-save-button, .permit-delete-button {
+	width: 40%;
+}
+.permit-delete-button {
+	margin-right: 4%;
+}
+.btn-group-smi {
+	margin-bottom: 7%;
+	margin-top: 0px;
+	margin-right: 0px;
+}
+.comments-edit {
+	height: 70%;
+}
+.top-marg {
+	margin-top: 1%;
+}
+.tm-tag {
+	width: 100%;
+	float: right;
+	text-align: right;
+	direction: rtl;
+}
+.indent-toggle {
+	margin-right: 23%;
+}
+.up-indent {
+	margin-top: 3%;
+}
+#roominput {
+	width: 3.5em;
+	display:inline
+}

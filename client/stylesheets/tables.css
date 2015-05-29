@@ -1,0 +1,27 @@
+.table > thead > tr > td.muted, .table > tbody > tr > td.muted, .table > tfoot > tr > td.muted, .table > thead > tr > th.muted, .table > tbody > tr > th.muted, .table > tfoot > tr > th.muted, .table > thead > tr.muted > td, .table > tbody > tr.muted > td, .table > tfoot > tr.muted > td, .table > thead > tr.muted > th, .table > tbody > tr.muted > th, .table > tfoot > tr.muted > th {
+	background-color: #ECECEC;
+}
+
+.label > .label-text-muted {
+	opacity: 0.66;
+	margin-right: 5px;
+}
+
+hr.thin {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+div.pull-right > button.close {
+    margin-right: -15px;
+    padding-left: 15px;
+}
+
+.dropdown-caret {
+	position: absolute;
+	bottom: 8px;
+	left: -15px;
+}
+.permits-tcolumn-mini{
+	width: 3.5%;
+}
