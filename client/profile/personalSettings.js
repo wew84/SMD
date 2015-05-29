@@ -10,7 +10,7 @@ Template.personalSettings.helpers({
   isInGrade : function(grade) {
   	return grade == Meteor.user().profile.grade;
   },
-  userName : function() {
+  name : function() {
     return Meteor.user().profile.name;
   }
 });

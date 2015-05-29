@@ -9,7 +9,8 @@ TODO: If isInRole handlebars to make differnt users have different tabs -->
 <div class="navbar-inner">
     <ul class="nav navbar-nav">
 	<li><a href="{{pathFor 'messageList'}}" class="navbar-btn">הודעות</a></li>
-	{{#if isInRole "administrator"}}<li><a href="{{pathFor 'courseList'}}" class="navbar-btn">קורסים</a></li>{{/if}}
+	{{#if isInRole "administrator"}}<li><a href="{{pathFor 'courseList'}}" class="navbar-btn">קורסים</a></li>
+	<li><a href="{{pathFor 'usermanagement'}}" class="navbar-btn">ניהול משתמשים</a></li>{{/if}}
 	<li><a href="{{pathFor 'profile'}}" class="navbar-btn">פרופיל</a></li>
 	<li><a href="/sign-out" class="navbar-btn">Sign Out</a></li>
 	</ul>
