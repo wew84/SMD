@@ -1,6 +1,6 @@
 <template name="profile">
 	<h3>פרטים אישיים</h3>
-	{{> personalSettings}}
+	{{> personalSettings this}}
 	
 	{{#unless isInRole "administrator"}}
 		<h3>עדכון קורסים</h3>

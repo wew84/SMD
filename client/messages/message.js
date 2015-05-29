@@ -1,6 +1,6 @@
 Template.message.helpers({
-	dateToView : function() {
-		return this.date.from(moment());
+	lastEdited : function() {
+		return moment(this.date).from(moment());
 	}
 });
 
