@@ -31,9 +31,9 @@ Meteor.publish('users', function(){
   return;
 })
 
-Meteor.publish('messagesByUserID', function(userID){
-	check(userID, String);
-	var userCourses = Meteor.users.findOne(userID).profile.courses;
+Meteor.publish('messagesByUserName', function(uname){
+	check(uname, String);
+	var userCourses = Meteor.users.findOne({"username":uname}).profile.courses;
 	console.log(userCourses)
 	return Messages.find({"completed": false, "course._id": {"$in": userCourses}});
 })
