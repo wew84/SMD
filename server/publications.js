@@ -14,6 +14,11 @@ Meteor.publish('messages', function(){
 	return Messages.find({"completed": false, "course._id": {"$in": userCourses}});
 });
 
+Meteor.publish('messageID', function(id){
+	check(id, String)
+	return Messages.findOne(id);
+});
+
 Meteor.publish('users', function(){
   if(Roles.userIsInRole(this.userId, 'administrator')) {
     return Meteor.users.find();
