@@ -29,11 +29,4 @@ Meteor.publish('users', function(){
   }
   this.stop();
   return;
-})
-
-Meteor.publish('messagesByUserName', function(uname){
-	check(uname, String);
-	var userCourses = Meteor.users.findOne({"username":uname}).profile.courses;
-	console.log(userCourses)
-	return Messages.find({"completed": false, "course._id": {"$in": userCourses}});
-})
+});
